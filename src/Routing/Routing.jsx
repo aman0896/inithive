@@ -11,7 +11,7 @@ function Routing() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/service" component={Service} />
         </Switch>
         <FooterContainer />
