@@ -24,22 +24,22 @@ function NavBar() {
           onClick={onhambergerClick}
         >
           <li className="nav-item">
-            <a className="navbar-links active" href="#hero-area">
+            <a className="navbar-links active" href="/">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a className="navbar-links" href="#about">
+            <a className="navbar-links" href="/#about">
               About
             </a>
           </li>
           <li className="nav-item">
-            <a className="navbar-links" href="#services">
+            <a className="navbar-links" href="/#services">
               Service
             </a>
           </li>
           <li className="nav-item">
-            <a className="navbar-links" href="#contact">
+            <a className="navbar-links" href="/#contact">
               Contact
             </a>
           </li>
