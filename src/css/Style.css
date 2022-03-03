@@ -51,3 +51,7 @@ h2 {
 a:hover {
   text-decoration: none;
 }
+
+#hero-area .contents {
+  padding: 170px 0px 50px;
+}

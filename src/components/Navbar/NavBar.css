@@ -54,11 +54,17 @@
 }
 
 .navbar-links.active {
-  text-decoration: underline;
-  padding: 0.5rem 0.5rem;
+  color: var(--orange);
 }
 
 .navbar-links:hover {
+  width: 100%;
+  text-decoration: none;
+  color: var(--orange);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+.navbar-links:active {
   width: 100%;
   text-decoration: none;
   color: var(--orange);

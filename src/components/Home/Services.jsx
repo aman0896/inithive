@@ -142,7 +142,7 @@ function Services() {
           </div>
         </div>
         <p className="text-center mt-3">
-          <a href="services.html">
+          <a href="/service">
             <b>
               Learn more <i className="fas fa-chevron-right ml-2"></i>
             </b>

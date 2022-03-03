@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
@@ -9,7 +10,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="NavbarItems">
+    <nav id="navbar" className="NavbarItems">
       <div className="navbar-container">
         <a className="navbar-logo" href="#logo">
           <div>Init Hive</div>
@@ -22,22 +23,22 @@ function NavBar() {
           className={hambergerClicked ? "navbar-menu active" : "navbar-menu"}
           onClick={onhambergerClick}
         >
-          <li>
-            <a className="navbar-links" href="#Home">
+          <li className="nav-item">
+            <a className="navbar-links active" href="#hero-area">
               Home
             </a>
           </li>
-          <li>
-            <a className="navbar-links" href="#About">
+          <li className="nav-item">
+            <a className="navbar-links" href="#about">
               About
             </a>
           </li>
-          <li>
-            <a className="navbar-links" href="#Service">
+          <li className="nav-item">
+            <a className="navbar-links" href="#services">
               Service
             </a>
           </li>
-          <li>
+          <li className="nav-item">
             <a className="navbar-links" href="#contact">
               Contact
             </a>
