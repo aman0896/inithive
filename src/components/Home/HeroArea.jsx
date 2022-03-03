@@ -19,16 +19,6 @@ function HeroArea() {
                   Kubernetes based Infrastructure
                 </h1>
               </div>
-              {/* <div
-                className="img-thumb text-center wow fadeInUp mb-5"
-                data-wow-delay="0.6s"
-              >
-                <img
-                  className="img-fluid mb-4 "
-                  src={kubernatesInfImage}
-                  alt="kubernatesInfastructure"
-                />
-              </div> */}
             </div>
           </div>
         </div>
