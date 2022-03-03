@@ -1,0 +1,21 @@
+#hero-area {
+  color: #111325;
+  overflow: hidden;
+  position: relative;
+  /* background-color: #111325; */
+  background-size: cover;
+}
+#hero-area .contents {
+  padding: 170px 0px 50px;
+}
+#hero-area .contents .logo {
+  max-width: 350px;
+}
+#hero-area .contents .head-title {
+  color: #111325;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.6px;
+}

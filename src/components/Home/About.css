@@ -1,0 +1,19 @@
+.title-hl {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.feature-thumb {
+  padding: 40px 0;
+  height: 100%;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.padding-none {
+  padding: 0px;
+}
+
+/* .feature-bg {
+  background: #0062ff;
+} */
