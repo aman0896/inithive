@@ -29,9 +29,9 @@ function About() {
                   innovate at speed and scale.
                 </p>
 
-                {/* <a href="#" className="btn btn-common mt-3">
+                <a href="#" className="btn btn-common mt-3">
                   Contact us
-                </a> */}
+                </a>
               </div>
             </div>
           </div>

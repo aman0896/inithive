@@ -1,29 +1,25 @@
 import React from "react";
-import {
-  automationImage,
-  kubernetsImage,
-  openStackImage,
-  publicServerCloudImage,
-} from "../../Values/Image";
 import "./Services.css";
 import { serviceList } from "../../Values/ServiceList";
+import Card from "../Card/Card";
 
 function Services() {
   console.log(serviceList, "list");
 
   const viewService = serviceList.map((service, index) => {
     return (
-      <div key={index} className="col-sm-6 col-xs-12">
+      <div key={index} className="col-sm-6 p-0 m-0 col-xs-12">
         <div className="services-item wow fadeInRight" data-wow-delay="0.3s">
           {/* <div className="img-wrapper">
             <img src={service.image} className="img-fluid" alt="kubernets" />
           </div> */}
-          <div className="services-content">
+          {/* <div className="services-content">
             <h3>
               <a href="#">{service.heading}</a>
             </h3>
             <p>{service.content}</p>
-          </div>
+          </div> */}
+          <Card data={service} />
         </div>
       </div>
     );
@@ -33,10 +29,10 @@ function Services() {
     <section id="services" className="section-padding">
       <div className="container">
         <div className="row section-mobile-view">
-          <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 service-content">
+          <div className="col-xl-7 col-lg-12 col-md-12 col-sm-12 service-content">
             <div className="row">{viewService}</div>
           </div>
-          <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 section-header">
+          <div className="col-xl-5 col-lg-12 col-md-12 col-sm-12 section-header">
             <h2 className="section-title wow fadeInDown" data-wow-delay="0.3s">
               We provide consulting and professional services on following
               areas:
@@ -50,13 +46,13 @@ function Services() {
             </p>
           </div>
         </div>
-        <p className="text-center mt-3">
+        {/* <p className="text-center mt-3">
           <a href="/service">
             <b>
               Learn more <i className="fas fa-chevron-right ml-2"></i>
             </b>
           </a>
-        </p>
+        </p> */}
       </div>
     </section>
   );

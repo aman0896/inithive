@@ -20,3 +20,13 @@ function ButtonComponent({ label, type, onClick }) {
 }
 
 export default ButtonComponent;
+
+export function ButtonComponentNew({ children, type, onClick }) {
+  return (
+    <div>
+      <button className="btn btn-common" type={type} onClick={onClick}>
+        {children}
+      </button>
+    </div>
+  );
+}

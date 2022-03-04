@@ -2,9 +2,15 @@ import React from "react";
 import { serviceList } from "../Values/ServiceList";
 
 function Service() {
+  console.log(window.location, "location");
+
   const viewService = serviceList.map((service, index) => {
     return (
-      <div key={index} className={index % 2 === 0 ? "bg-gray" : "bg-light"}>
+      <div
+        key={index}
+        id={service.id}
+        className={index % 2 === 0 ? "bg-gray pt-2 pb-2" : "bg-light pt-2 pb-2"}
+      >
         <div className="container pt-5 pb-5">
           <div
             className={index % 2 === 0 ? "row" : "row d-flex flex-row-reverse"}

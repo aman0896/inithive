@@ -7,6 +7,7 @@ import {
 
 export const serviceList = [
   {
+    id: "kubernetes",
     heading: "Kubernetes and Microservices architecture",
     content: `Microservices architecture and technologies like
     Kubernetes and Docker promises a lot, but are equally
@@ -27,6 +28,7 @@ export const serviceList = [
     image: kubernetsImage,
   },
   {
+    id: "open-stack",
     heading: "Openstack Private Cloud",
     content: `Lorem Ipsum is simply dummy text of the printing and
     typesetting industry. Lorem Ipsum has been the industry's
@@ -48,6 +50,7 @@ export const serviceList = [
     image: openStackImage,
   },
   {
+    id: "public-cloud-server",
     heading: "Public Cloud Server",
     content: `Lorem Ipsum is simply dummy text of the printing and
     typesetting industry. Lorem Ipsum has been the industry's
@@ -69,6 +72,7 @@ export const serviceList = [
     image: publicServerCloudImage,
   },
   {
+    id: "automation",
     heading: "Monitoring and Automation Services",
     content: `Lorem Ipsum is simply dummy text of the printing and
     typesetting industry. Lorem Ipsum has been the industry's
