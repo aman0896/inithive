@@ -138,6 +138,11 @@
   cursor: pointer;
 }
 
+.navbar-links span {
+  padding: 0px;
+  color: var(--orange);
+}
+
 @media screen and (max-width: 1230px) {
   .NavbarItems {
     position: sticky;
@@ -170,13 +175,11 @@
   .navbar-links {
     color: var(--white);
     text-align: center;
-    width: 100%;
     display: table;
   }
 
   .navbar-links:hover {
-    background-color: var(--primary);
-    border-radius: 0px;
+    color: var(--orange);
     transition: all 0.2s ease-out;
   }
 

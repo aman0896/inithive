@@ -30,3 +30,8 @@
   --light: #f8f9fa;
   --dark: #111325;
 }
+
+:root {
+  --animate-delay: 0.2s;
+  --animate-duration: 1s;
+}

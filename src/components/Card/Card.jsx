@@ -1,7 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./Card.css";
 
 function Card({ data }) {
+  const history = useHistory();
+
+  const onLearnMoreClick = (id) => {
+    console.log(id, "idd");
+    history.push({ pathname: "/service", state: id });
+  };
+
   return (
     <div id="card" className="card_main_container">
       <div className="card_inside_container">
@@ -17,11 +25,11 @@ function Card({ data }) {
           </div>
         </div>
         <p className="text-center">
-          <a href={`/service/#${data.id}`}>
+          <span onClick={() => onLearnMoreClick(data.id)}>
             <b>
               Learn more <i className="fas fa-chevron-right ml-2"></i>
             </b>
-          </a>
+          </span>
         </p>
       </div>
     </div>

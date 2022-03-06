@@ -11,7 +11,7 @@ function About() {
             <div className="text-wrapper pt-5 pb-5">
               <div>
                 <h2
-                  className="title-hl wow fadeInLeft mb-4"
+                  className="title-hl wow animate__animated animate__fadeInLeft mb-4"
                   data-wow-delay="0.3s"
                 >
                   We are helping to grow <br />

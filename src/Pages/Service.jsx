@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { serviceList } from "../Values/ServiceList";
 
 function Service() {
-  console.log(window.location, "location");
+  const location = useLocation();
+  useEffect(() => {
+    const id = location.state;
+    if (id) {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 60,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, []);
 
   const viewService = serviceList.map((service, index) => {
     return (
@@ -26,18 +39,31 @@ function Service() {
             <div className="col-lg-6 col-md-12 col-sm-12">
               <div className="section-header">
                 <h2
-                  className="section-title wow fadeInLeft mb-4"
+                  className="section-title wow animate__animated animate__fadeInRight mb-4"
                   data-wow-delay="0.3s"
                 >
                   {service.heading}
                 </h2>
-                <p className="mb-3">{service.detail2}</p>
-                <p className="mb-3">{service.detail2}</p>
+                <p
+                  className="mb-3 wow animate__animated animate__fadeInUp"
+                  data-wow-delay="0.3s"
+                >
+                  {service.detail2}
+                </p>
+                <p
+                  className="mb-3 wow animate__animated animate__fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  {service.detail2}
+                </p>
               </div>
             </div>
           </div>
 
-          <ul className="fa-ul">
+          <ul
+            className="fa-ul wow animate__animated animate__fadeInUp"
+            data-wow-delay="0.9s"
+          >
             <li>
               <span className="fa-li">
                 <i className="fas fa-check-square"></i>

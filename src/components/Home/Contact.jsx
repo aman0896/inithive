@@ -19,13 +19,16 @@ function Contact() {
   };
 
   return (
-    <section id="contact" class="section-padding">
-      <div class="container">
-        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
-          <div class="col-md-12 col-lg-12 col-sm-12">
-            <div class="contact-block">
-              <div class="section-header text-center">
-                <h2 class="section-title">Contact Us</h2>
+    <section id="contact" className="section-padding">
+      <div className="container">
+        <div
+          className="row contact-form-area wow animate__animated animate__fadeInUp"
+          data-wow-delay="0.4s"
+        >
+          <div className="col-md-12 col-lg-12 col-sm-12">
+            <div className="contact-block">
+              <div className="section-header text-center">
+                <h2 className="section-title">Contact Us</h2>
                 <p>
                   Please fill out the form below and one of our team will be in
                   touch with you in the near future.
@@ -36,8 +39,8 @@ function Contact() {
                 validationSchema={formValidation}
                 onSubmit={handleSubmit}
               >
-                <div class="row">
-                  <div class="col-md-6">
+                <div className="row">
+                  <div className="col-md-6">
                     <FormikController
                       label="Name"
                       type="text"
@@ -47,7 +50,7 @@ function Contact() {
                       after="*"
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <FormikController
                       name="company_name"
                       type="text"
@@ -57,7 +60,7 @@ function Contact() {
                       after="*"
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <FormikController
                       name="form_email"
                       type="email"
@@ -67,7 +70,7 @@ function Contact() {
                       after="*"
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <FormikController
                       name="contact_number"
                       label="Phone Number"
@@ -77,7 +80,7 @@ function Contact() {
                       after="*"
                     />
                   </div>
-                  <div class="col-md-12">
+                  <div className="col-md-12">
                     <FormikController
                       name="form_message"
                       label="Tell us a bit about your needs"

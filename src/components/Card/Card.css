@@ -59,6 +59,14 @@
   padding: 0px 10px;
 }
 
+#card span {
+  color: #007bff;
+}
+#card span:hover {
+  color: #0e5fb6;
+  cursor: pointer;
+}
+
 /* @media screen and (max-width: 550px) {
   .card_inside_container {
     display: flex;

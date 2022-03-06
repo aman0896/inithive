@@ -3,10 +3,13 @@ import { initHiveLogoImage } from "../../Values/Image";
 import { ButtonComponentNew } from "../Button/ButtonComponent";
 import Scrollspy from "react-scrollspy";
 import "./NavBar.css";
+import { useHistory, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [hambergerClicked, isHambergerClicked] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
+
+  const history = useHistory();
 
   const onhambergerClick = () => {
     isHambergerClicked(!hambergerClicked);
@@ -16,95 +19,107 @@ function NavBar() {
     window.location.href = "#";
   };
 
-  useEffect(() => {
-    console.log(window.location.pathname, "pathname");
-    if (window.location.pathname === "/service/") {
-      setActiveMenu("services");
-    }
-    if (window.location.pathname === "/") {
-      setActiveMenu("#");
-      if (window.location.hash === "#about") {
-        setActiveMenu("about");
-      } else if (window.location.hash === "#services") {
-        setActiveMenu("services");
-      } else if (window.location.hash === "#contact") {
-        setActiveMenu("contact");
-      }
-    }
-  }, []);
-
   const handleNavMenuClicked = (id) => {
     setActiveMenu(id);
+    onhambergerClick();
+    if (window.location.pathname !== "/") {
+      history.push({ pathname: "/", state: id });
+    }
   };
+
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    const element = document.getElementById(activeMenu);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 60,
+        behavior: "smooth",
+      });
+    }
+  }, [activeMenu]);
 
   return (
     <nav id="navbar" className="NavbarItems">
       <div className="navbar-container">
-        <a className="navbar-logo" href="#logo">
+        <a className="navbar-logo" href="/#">
           <img src={initHiveLogoImage} alt="logo" />
         </a>
 
         <div className="menu-icon" onClick={onhambergerClick}>
           <i className={hambergerClicked ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
-        <ul
+
+        <Scrollspy
           className={hambergerClicked ? "navbar-menu active" : "navbar-menu"}
-          onClick={onhambergerClick}
+          items={["hero-area", "about", "services", "contact"]}
+          currentClassName="navbar-links"
+          offset={-70}
+          onUpdate={(el) => {
+            console.log(window.location.pathname, "path");
+            if (window.location.pathname === "/") {
+              setActiveMenu("");
+            }
+          }}
         >
           <li className="nav-item">
-            <a
-              onClick={() => handleNavMenuClicked("#")}
+            <span
+              onClick={() => handleNavMenuClicked("hero-area")}
               className={
-                activeMenu === "#" ? "navbar-links active" : "navbar-links"
+                activeMenu === "hero-area"
+                  ? "navbar-links active"
+                  : "navbar-links"
               }
-              href="/#"
             >
               Home
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a
+            <span
               onClick={() => handleNavMenuClicked("about")}
               className={
                 activeMenu === "about" ? "navbar-links active" : "navbar-links"
               }
-              href="/#about"
+              href=""
             >
               About
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a
+            <span
               onClick={() => handleNavMenuClicked("services")}
               className={
                 activeMenu === "services"
                   ? "navbar-links active"
                   : "navbar-links"
               }
-              href="/#services"
             >
               Service
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a
+            <span
               onClick={() => handleNavMenuClicked("contact")}
               className={
                 activeMenu === "contact"
                   ? "navbar-links active"
                   : "navbar-links"
               }
-              href="/#contact"
             >
               Contact
-            </a>
+            </span>
           </li>
           <li className="navbar-button-mobile">
             <ButtonComponentNew onClick={onClickLogin} type="button">
               Login In
             </ButtonComponentNew>
           </li>
-        </ul>
+        </Scrollspy>
         <div className="navbar-button">
           <ButtonComponentNew onClick={onClickLogin} type="button">
             Login In
